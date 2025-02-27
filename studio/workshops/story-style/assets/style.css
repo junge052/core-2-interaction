@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Crédible';
+    src: url('fonts/Crédible-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'terminalgrotesque';
+    src: url('fonts/terminal-grotesque-webfont.ttf') format('opentype');
+}
+@font-face {
+    font-family: 'RubikPixels-Regular';
+    src: url('fonts/RubikPixels-Regular.ttf') format('truetype');
+}
+	p{
+        font-family: terminalgrotesque;
+        font-size: 23px;
+        line-height: 30px;
+        text-indent: 2rem;
+        font-style: normal;
+        color: #494368;
+        line-height: 30px;
+    }
+    body{
+        background-color: #CEEC97;
+        margin: 30px;
+    
+    }
+    .home .main {
+        font-size: 3rem;
+        font-family: 'Crédible', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #7A28CB;
+        text-shadow: 0 0 5px #CEEC97,
+                     0 0 10px #CEEC97;
+    }
+    
+    .heart-container {
+        position: relative;
+        display: inline-block;
+        padding: 60px 80px; 
+        text-align: center;
+        background-color: #FC60A8; 
+        
+        clip-path: path(
+            M 150 30 
+            C 200 -40, 350 -40, 400 30 
+            C 450 100, 400 200, 250 300 
+            C 100 200, 50 100, 100 30 
+            C 150 -40, 300 -40, 350 30 
+            Z
+        );
+        box-shadow: 0 0 15px rgba(252, 96, 168, 0.8);
+    }
+    
+    .nav {
+        margin-bottom: 30px;
+    }
+    .part-one .main {
+        .highlight {
+            color: #ecfd4e;
+            font-family: 'RubikPixels-Regular';
+        }
+    }
+    .part-two .main {
+        .highlight {
+            color: #FC60A8;
+            font-family: 'RubikPixels-Regular';
+        }
+    }
+    .nav-link {
+        font-family: terminalgrotesque;
+        font-size: larger;
+background-color: aliceblue;
+color: black;
+padding: 5px;
+border-radius: 10px;
+    }
+    .nav-link:hover {
+        background-color:#FC60A8;
+        box-shadow: 0 0 10px #F4B393;
+    }
+/* ==================INDEX HOVER ANIMATION=============== */
+@keyframes tilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+.tilt:hover {
+    display: inline-block;
+    animation: tilt 0.3s ease-in-out infinite;
+}
+.highlight {
+    position: relative;
+    color: #ff41a0; 
+    cursor: pointer;
+    text-decoration: underline;
+}
+.part-two .highlight::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background-image: url('/assets/images/barbie.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.part-two .highlight:hover::after {
+    opacity: 1;
+}
+
+
